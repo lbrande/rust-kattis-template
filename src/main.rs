@@ -1,12 +1,14 @@
 macro_rules! scanln {
-    ($($type:ty),+) => ({
+    ($($var:ident),+) => ({
         let mut line = String::new();
         std::io::stdin().read_line(&mut line).unwrap();
         let mut line = line.split_whitespace();
-        ($(line.next().unwrap().parse::<$type>().unwrap(),)+)
+        $($var = line.next().unwrap().parse().unwrap();)+
     })
 }
 
 fn main() {
-    let _ = scanln!(i32);
+    let i: i32;
+    scanln!(i);
+    println!("{}", i);
 }
