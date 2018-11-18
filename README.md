@@ -8,7 +8,7 @@
 3. Include `kattis.rs` when submitting to Kattis.
 # Examples
 ## scanln!
-### Scan
+### kScan
 ```rust
 let (i, j): (u8, i32);
 scanln!(i, j);
@@ -23,7 +23,7 @@ scanln!(2, i, rest);
 let vec: Vec<i32> = scanln!().collect();
 ```
 ## scanstr!
-###Scan
+### Scan
 ```rust
 let str = "6 3";
 let (i, j): (u8, i32);
