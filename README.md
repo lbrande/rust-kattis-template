@@ -1,5 +1,5 @@
 # Usage
-1. Place `kattis.rs` into the same directory as `main.rs` (or clone this repository).
+1. Place `kattis.rs` into the same directory as `main.rs` (or clone and use this repository).
 2. Add these lines to the top of `main.rs`:
     ```rust
     #[macro_use]
