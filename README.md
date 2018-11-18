@@ -8,7 +8,7 @@
 3. Include `kattis.rs` when submitting to Kattis.
 # Examples
 ## scanln!
-###Scan
+### Scan
 ```rust
 let (i, j): (u8, i32);
 scanln!(i, j);
