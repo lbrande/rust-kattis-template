@@ -5,6 +5,7 @@
     #[macro_use]
     mod kattis;
     ```
+3. Include `kattis.rs` when submitting to Kattis.
 # Examples
 ## scanln!
 ```rust
