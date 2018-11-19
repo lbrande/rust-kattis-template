@@ -1,5 +1,5 @@
 #![allow(unused_macros)]
-macro_rules! scanstr {
+macro_rules! scan_str {
     ($str:expr,$($var:expr),+) => {
         let mut str = $str.split_whitespace();
         $($var = str.next().unwrap().parse().unwrap();)+
@@ -17,16 +17,16 @@ macro_rules! scanln {
     ($($var:expr),+) => {
         let mut line = String::new();
         std::io::stdin().read_line(&mut line).unwrap();
-        scanstr!(line, $($var),+);
+        scan_str!(line, $($var),+);
     };
     ($max:expr,$($var:expr),+) => {
         let mut line = String::new();
         std::io::stdin().read_line(&mut line).unwrap();
-        scanstr!(line, $max, $($var),+);
+        scan_str!(line, $max, $($var),+);
     };
     () => ({
         let mut line:String = String::new();
         std::io::stdin().read_line(&mut line).unwrap();
-        line.clone().split_whitespace().map(|s| s.parse().unwrap())
+        scan_str!(line.clone())
     })
 }
