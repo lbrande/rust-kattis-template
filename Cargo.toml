@@ -2,5 +2,4 @@
 name = "rust-kattis-template"
 version = "1.0.0"
 authors = ["lbrande <lovbra00@gmail.com>"]
-
-[dependencies]
+edition = "2018"
