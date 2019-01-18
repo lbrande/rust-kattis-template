@@ -25,7 +25,7 @@ macro_rules! scanln {
         scan_str!(line, $max, $($var),+);
     };
     () => ({
-        let mut line:String = String::new();
+        let mut line = String::new();
         std::io::stdin().read_line(&mut line).unwrap();
         scan_str!(line.clone())
     })
