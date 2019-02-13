@@ -1,11 +1,5 @@
 # Usage
-1. Place `kattis.rs` into the same directory as `main.rs` (or clone and use this repository).
-2. Add these lines to the top of `main.rs`:
-    ```rust
-    #[macro_use]
-    mod kattis;
-    ```
-3. Include `kattis.rs` when submitting to Kattis.
+Run `new.sh <name>` to create a new cargo project with rust-kattis-template set up.
 # Examples
 ## scanln!
 ### Scan
