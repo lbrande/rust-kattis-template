@@ -1,10 +1,10 @@
 #![allow(unused_macros)]
 macro_rules! scan_str {
-    ($str:expr,$($var:expr),+) => {
+    ($str:expr,$($var:ident),+) => {
         let mut str = $str.split_whitespace();
         $($var = str.next().unwrap().parse().unwrap();)+
     };
-    ($str:expr,$max:expr,$($var:expr),+) => {
+    ($str:expr,$max:expr,$($var:ident),+) => {
         let mut str = $str.splitn($max, char::is_whitespace);
         $($var = str.next().unwrap().parse().unwrap();)+
     };
@@ -14,12 +14,12 @@ macro_rules! scan_str {
 }
 
 macro_rules! scanln {
-    ($($var:expr),+) => {
+    ($($var:ident),+) => {
         let mut line = String::new();
         std::io::stdin().read_line(&mut line).unwrap();
         scan_str!(line, $($var),+);
     };
-    ($max:expr,$($var:expr),+) => {
+    ($max:expr,$($var:ident),+) => {
         let mut line = String::new();
         std::io::stdin().read_line(&mut line).unwrap();
         scan_str!(line, $max, $($var),+);
