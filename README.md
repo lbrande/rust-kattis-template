@@ -34,3 +34,7 @@ scan_str!(str, 2, i, rest);
 let str = "2 3 5 7 11";
 let vec: Vec<i32> = scan_str!(str).collect();
 ```
+## readln!
+```rust
+let str = readln!();
+```

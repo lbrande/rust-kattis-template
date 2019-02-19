@@ -30,3 +30,11 @@ macro_rules! scanln {
         scan_str!(line.clone())
     })
 }
+
+macro_rules! readln {
+    () => ({
+        let mut line = String::new();
+        std::io::stdin().read_line(&mut line).unwrap();
+        line
+    });
+}
