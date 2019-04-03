@@ -32,10 +32,25 @@ macro_rules! scanln {
 }
 
 macro_rules! readln {
-    () => ({
+    () => {{
         let mut line = String::new();
         std::io::stdin().read_line(&mut line).unwrap();
         line.truncate(line.len() - 1);
         line
-    });
+    }};
+}
+
+macro_rules! read_lns {
+    () => {{
+        let mut lines = Vec::new();
+        loop {
+            let mut line = String::new();
+            if std::io::stdin().read_line(&mut line).unwrap() == 0 {
+                break;
+            }
+            line.truncate(line.len() - 1);
+            lines.push(line);
+        }
+        lines
+    }};
 }

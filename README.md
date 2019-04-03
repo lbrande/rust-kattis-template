@@ -19,22 +19,26 @@ let vec: Vec<i32> = scanln!().collect();
 ## scan_str!
 ### Scan
 ```rust
-let str = "6 3";
+let string = "6 3";
 let (i, j): (u8, i32);
-scan_str!(str, i, j);
+scan_str!(string, i, j);
 ```
 ### Scan and return rest
 ```rust
-let str = "4 hello";
+let string = "4 hello";
 let (i, rest): (usize, String);
-scan_str!(str, 2, i, rest);
+scan_str!(string, 2, i, rest);
 ```
 ### Scan into iterator
 ```rust
-let str = "2 3 5 7 11";
-let vec: Vec<i32> = scan_str!(str).collect();
+let string = "2 3 5 7 11";
+let vec: Vec<i32> = scan_str!(string).collect();
 ```
 ## readln!
 ```rust
-let str = readln!();
+let line = readln!();
+```
+## read_lns!
+```rust
+let lines = readlns!();
 ```
