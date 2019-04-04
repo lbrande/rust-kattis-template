@@ -35,7 +35,8 @@ macro_rules! readln {
     () => {{
         let mut line = String::new();
         std::io::stdin().read_line(&mut line).unwrap();
-        line.truncate(line.len() - 1);
+        let len = line.len();
+        line.truncate(len - 1);
         line
     }};
 }
@@ -48,7 +49,8 @@ macro_rules! read_lns {
             if std::io::stdin().read_line(&mut line).unwrap() == 0 {
                 break;
             }
-            line.truncate(line.len() - 1);
+            let len = line.len();
+            line.truncate(len - 1);
             lines.push(line);
         }
         lines
